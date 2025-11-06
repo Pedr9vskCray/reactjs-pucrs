@@ -1,0 +1,36 @@
+.form-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: grey;
+}

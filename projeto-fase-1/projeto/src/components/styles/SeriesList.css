@@ -1,0 +1,39 @@
+.series-list {
+    text-align: center;
+}
+
+.single-serie-div {
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px 140px 10px 15px;
+    border: 1px solid #ccc;
+    font-size: 22px;
+    inset: 0;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.btn-edit {
+   width: fit-content;
+   height: fit-content;
+   color: white;
+   background-color: #4CAF50;
+}
+
+.btn-delete {
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    background-color: red;
+}
+
+.btn-edit:hover {
+    background-color: grey;
+}
+
+.btn-delete:hover {
+    background-color: grey;
+}
