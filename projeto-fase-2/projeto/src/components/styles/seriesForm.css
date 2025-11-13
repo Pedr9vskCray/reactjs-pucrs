@@ -1,0 +1,94 @@
+body {
+  background: linear-gradient(90deg, #010e52 0%, #004894 50%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #e6eef6;
+  margin: 0;
+  padding: 0;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 150px;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #004894;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form h1 {
+  text-align: center;
+  color: #ba0001;
+  margin-bottom: 20px;
+}
+
+form p {
+  margin: 8px 0 4px;
+  font-weight: 600;
+  color: #333;
+}
+
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  resize: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #004894;
+  box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.15);
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ba0001;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #c14343;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 30px 25px;
+  }
+
+  form h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
