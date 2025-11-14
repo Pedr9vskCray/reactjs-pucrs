@@ -113,7 +113,7 @@ function SeriesForm(){
     // form for adding new series
     return (
         <div className="form-div">
-          <form onSubmit={addSerie}>
+          <form onSubmit={addSerie} className="data-form">
             <label><h1>Cadastrar Séries</h1></label>
             <br/>
             <p>Título:</p>
@@ -148,7 +148,7 @@ function SeriesForm(){
             />
             <br/>
             <br/>
-            <button>Cadastrar Série</button>
+            <button className="btn-submit">Cadastrar Série</button>
             </form>  
         </div>
     )

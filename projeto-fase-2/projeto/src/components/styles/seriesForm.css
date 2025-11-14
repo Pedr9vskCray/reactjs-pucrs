@@ -25,6 +25,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 100px;
 }
 
 form h1 {
@@ -58,8 +59,7 @@ input[type="date"]:focus {
   box-shadow: 0 0 0 3px rgba(75, 0, 130, 0.15);
 }
 
-button {
-  margin-top: 15px;
+.btn-submit {
   padding: 10px 20px;
   background-color: #ba0001;
   color: #fff;
@@ -69,6 +69,7 @@ button {
   font-weight: 600;
   font-size: 15px;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 525px;
 }
 
 button:hover {

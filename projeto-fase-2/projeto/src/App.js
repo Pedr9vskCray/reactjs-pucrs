@@ -5,6 +5,7 @@ import NavBar from "./components/navBar";
 import Home from "./components/home";
 import Sobre from "./components/sobre"
 import SeriesForm from "./components/cadastrar";
+import ListaSeries from "./components/listarSeries";
 
 {/* NavBar Pages */}
 const paginas = [
@@ -14,9 +15,14 @@ const paginas = [
   {"path": "/listadeseries", "text": "Lista de Séries"}
 ]
 
+{/* API Url */}
+const url = "http://localhost:5000/series";
 
 function App(){
   return (
+
+
+
     <BrowserRouter>
 
     {/* Navegação */}
@@ -27,6 +33,7 @@ function App(){
       <Route path="/" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/cadastrarseries" element={<SeriesForm />} />
+      <Route path="/listadeseries" element={<ListaSeries />} />
     </Routes>
     
     </BrowserRouter>
