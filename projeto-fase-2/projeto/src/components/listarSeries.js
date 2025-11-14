@@ -1,11 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Card, CardContent, Typography, Grid, Button, Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 
 function ListaSeries() {
+
+    // Navigate
+    const navigate = useNavigate();
 
     // Series state
     const [series, setSeries] = useState([]);
@@ -101,7 +105,7 @@ function ListaSeries() {
                   <Typography><strong>Assistiu em:</strong> {serie.watchedAt}</Typography>
 
                   <Box sx={{ mt: 2, display: "flex", gap: 1 }}>
-                    <Button variant="outlined" size="small" color="primary">
+                    <Button variant="outlined" size="small" color="primary" onClick={() => navigate("/atualizarserie", { state: { serie }})}>
                       Editar
                     </Button>
                     <Button variant="outlined" size="small" color="error" onClick={() => HandleDelete(serie)}>

@@ -6,6 +6,7 @@ import Home from "./components/home";
 import Sobre from "./components/sobre"
 import SeriesForm from "./components/cadastrar";
 import ListaSeries from "./components/listarSeries";
+import AtualizarSerie from "./components/atualizarSeries";
 
 {/* NavBar Pages */}
 const paginas = [
@@ -34,6 +35,7 @@ function App(){
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/cadastrarseries" element={<SeriesForm />} />
       <Route path="/listadeseries" element={<ListaSeries />} />
+      <Route path="/atualizarserie" element={<AtualizarSerie />} />
     </Routes>
     
     </BrowserRouter>
