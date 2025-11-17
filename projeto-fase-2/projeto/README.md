@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Projeto Fase 2 - PUCRS Online
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto foi feito utilizando React [Create React App]
 
-## Available Scripts
+## Comandos Disponíveis
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para executar o projeto em modo de desenvolvimento
+Abra [http://localhost:3000](http://localhost:3000) para visualizar em seu navegador
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para lançar o ambiente de teste no modo interativo
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para buildar o projeto na pasta "./build"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para instalar todas as dependências
 
-### `npm run eject`
+## Dependências utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- react
+- react-router-dom
+- axios
+- @testing-library/jest-dom
+- @mui/material
+- @mui/icons-material
+- web-vitals
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Componentização
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+O App é divido em componentes, cada um com sua função e objetivo que estão brevemente descritos abaixo:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### App.js
 
-## Learn More
+Reúne todos os componentes para serem executados, também define as rotas que levarão para cada componente
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### navBar.js 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+É o componente responsável pela barra de navegação, está sempre presente em qualquer página do App, possui botões que redirecionam para outras rotas (outros componentes) que foram definidas no App.js
 
-### Code Splitting
+`A navBar e a sua utilização pode ser vista nas fotos dos outros componentes...`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### home.js
 
-### Analyzing the Bundle Size
+É a página inicial do projeto e serve como introdução para o App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![home](imagens/home.png)
 
-### Making a Progressive Web App
+### sobre.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+É a página onde descrevemos a função e objetivo do App
+![sobre](imagens/sobre.png)
 
-### Advanced Configuration
+### cadastrar.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+É a página onde cadastramos séries novas utilizando o formulário presente na página
 
-### Deployment
+![cadastrar1](imagens/cadastrar1.png)
+![cadastrar2](imagens/cadastrar2.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### listarSeries.js
 
-### `npm run build` fails to minify
+É a página que lista as séries que temos cadastradas em nosso App, possui botões para editar e excluir as séries conforme for desejado
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![listarSeries](imagens/listadeseries.png)
+
+### atualizarSeries.js
+
+É uma página "oculta" que só pode ser acessada ao tentar editar as informações de alguma das séries listadas no componente `listarSeries.js`, é uma versão do componente `cadastrar.js` que vem preenchido automaticamente com as informações da série que o usuário escolheu editar, ao enviar o formulário, as informações da série escolhida são atualizadas e o usuário é automaticamente redirecionado de volta para
+`listarSeries.js`
+
+![atualizarSeries1](imagens/atualizarserie1.png)
+![atualizarSeries2](imagens/atualizarserie2.png)
+
+## API
+
+Esse projeto depende também da API `serieJournal-api` que se encontra em [API](https://github.com/adsPucrsOnline/DesenvolvimentoFrontend/tree/main/serieJournal-api)
